@@ -33,6 +33,5 @@ df-messenger {
         --df-messenger-user-message: #1187ee;
 
     Source :
-        https://chatimize.com/dialogflow-messenger/
-*/
+        https://cloud.google.com/dialogflow/es/docs/integrations/dialogflow-messenger#css-customize*/
 </style>
