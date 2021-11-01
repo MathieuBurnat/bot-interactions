@@ -5,6 +5,7 @@ class Bot {
     this.firstName = userData.firstName;
     this.old = userData.old;
 
+    this.dfMessenger = document.querySelector("df-messenger");
     this.createMessages();
   }
 
@@ -29,13 +30,15 @@ class Bot {
 
   displayMessages() {
     // Send content via the chatbox
-    const dfMessenger = document.querySelector("df-messenger");
-
     for(let i = 0; i < this.messages.length; i++){
-        this.messages[i].display(dfMessenger);
+        this.messages[i].display(this.dfMessenger);
     }
 
-    dfMessenger.expand = true;
+    this.dfMessenger.expand = true;
+  }
+
+  test(){
+    console.log("-- Test Area --");
   }
 }
 

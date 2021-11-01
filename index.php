@@ -57,6 +57,7 @@
         // Create the bot
         const bot = new Bot(userData);
         bot.displayMessages();
+        bot.test();
     }
 </script>
 
