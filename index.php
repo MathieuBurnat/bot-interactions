@@ -13,7 +13,7 @@
 
 <body>
     <h3> Formulary </h3>
-    <form action="/action_page.php">
+    <form action="post">
         <label for="lname">Nom</label><br>
         <input type="text" id="lname" name="lname" value="Rionzi"><br>
 
@@ -23,13 +23,25 @@
         <label for="old">Age</label><br>
         <input type="text" id="old" name="old" value="54"><br><br>
 
-        <a class="waves-effect waves-light btn center"><i class="material-icons right">cloud</i>Launch Bot's experiments </a>
-    </form>
+        <a onclick="myFunction();" class="waves-effect waves-light btn center">
+            <i class="material-icons right">cloud</i>
+            Launch Bot's experiments
+        </a>
 
-    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    </form>
+    <p>Click on this button to launch the Bot's experiments :)</p>
 </body>
 
 </html>
+
+<script>
+function myFunction() {
+    console.log("User's informations :");
+    console.log(document.getElementById('lname').value);
+    console.log(document.getElementById('fname').value);
+    console.log(document.getElementById('old').value);
+}
+</script>
 
 <style>
 body {
