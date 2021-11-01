@@ -11,7 +11,7 @@
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
-<df-messenger chat-title="a cactus manager" agent-id=<?=$configs["agentId"]?> language-code="en" />
+<df-messenger chat-title="a cactus manager" agent-id=<?=$configs["agentId"]?> language-code="en"/>
 
 Time to be the pawner https://cloud.google.com/dialogflow/es/docs/integrations/dialogflow-messenger#rendercustomtext
 
