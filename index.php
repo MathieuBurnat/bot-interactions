@@ -42,18 +42,20 @@
 
     function experiment() {
         // get user's informations
-        const lastName = document.getElementById('lname').value;
-        const firstName = document.getElementById('fname').value;
-        const old = document.getElementById('old').value;
+        const userData = {
+            lastName: document.getElementById('lname').value,
+            firstName: document.getElementById('fname').value,
+            old: document.getElementById('old').value,
+        }
 
         console.log("User's informations :");
 
-        console.log(lastName);
-        console.log(firstName);
-        console.log(old);
+        console.log(userData.lastName);
+        console.log(userData.firstName);
+        console.log(userData.old);
         
         // Create the bot
-        const bot = new Bot(lastName, firstName, old);
+        const bot = new Bot(userData);
         bot.test();
     }
 </script>
