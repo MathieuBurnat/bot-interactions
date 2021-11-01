@@ -23,7 +23,7 @@
         <label for="old">Age</label><br>
         <input type="text" id="old" name="old" value="54"><br><br>
 
-        <a onclick="myFunction();" class="waves-effect waves-light btn center">
+        <a onclick="experiment();" class="waves-effect waves-light btn center">
             <i class="material-icons right">cloud</i>
             Launch Bot's experiments
         </a>
@@ -35,7 +35,7 @@
 </html>
 
 <script>
-function myFunction() {
+function experiment() {
     console.log("User's informations :");
     console.log(document.getElementById('lname').value);
     console.log(document.getElementById('fname').value);
