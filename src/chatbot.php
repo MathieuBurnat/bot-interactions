@@ -21,7 +21,7 @@ Time to be the pawner https://cloud.google.com/dialogflow/es/docs/integrations/d
 */
 
 df-messenger {
-    --df-messenger-button-titlebar-color: #4caf50;
+    --df-messenger-button-titlebar-color: #26a69a;
 }
 
 /*
