@@ -50,18 +50,21 @@
         console.log(firstName);
         console.log(old);
 
-        // Create a message
-        const message = "Hey " + firstName + ", haven't you " + old + " years old ? This is moment for you to buy a beautiful and fresh cactus ! :)";
-
-        // Send a message
-        const dfMessenger = document.querySelector('df-messenger');
-        dfMessenger.renderCustomText(message);
-
-        const payload = [{
+        // Create messages
+        const introMessage = "Hey " + firstName + ", haven't you " + old + " years old ? This is THE moment for you to buy a beautiful and fresh cactus !";
+        const calmMessage = "Do you know that plants could lowers the levels of anxiety and increases the productivity ?"
+        
+        // Create the image
+        const introImage = [{
             "type" : "image",
-            "rawUrl": "https://c.tenor.com/GbutACtJBTMAAAAd/cat.gif"
+            "rawUrl": "https://cdn.dribbble.com/users/203287/screenshots/4389638/cacti2.gif"
         }];
-        dfMessenger.renderCustomCard(payload);
+
+        // Send content via the chatbox
+        const dfMessenger = document.querySelector('df-messenger');
+        dfMessenger.renderCustomCard(introImage);
+        dfMessenger.renderCustomText(introMessage);
+        dfMessenger.renderCustomText(calmMessage);
     }
 </script>
 
