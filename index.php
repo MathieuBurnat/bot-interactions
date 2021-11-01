@@ -30,6 +30,9 @@
 
     </form>
     <p>Click on this button to launch the Bot's experiments :)</p>
+
+    <?php include("src/bot.php"); ?>
+
 </body>
 
 </html>

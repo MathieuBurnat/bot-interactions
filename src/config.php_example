@@ -1,0 +1,7 @@
+<?php
+
+return array(
+    "agentId" => "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx",
+);
+
+?>
