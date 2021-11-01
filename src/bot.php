@@ -13,7 +13,7 @@
 
 <df-messenger intent="WELCOME" chat-title="Cactus's Manager" agent-id=<?=$configs["agentId"]?> language-code="en" />
 
-
+Time to be the pawner https://cloud.google.com/dialogflow/es/docs/integrations/dialogflow-messenger#rendercustomtext
 
 <style>
 /* 

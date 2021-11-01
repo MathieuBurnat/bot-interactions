@@ -38,19 +38,38 @@
 </html>
 
 <script>
-function experiment() {
-    console.log("User's informations :");
-    console.log(document.getElementById('lname').value);
-    console.log(document.getElementById('fname').value);
-    console.log(document.getElementById('old').value);
-}
+    function experiment() {
+        // get user's informations
+        const lastName = document.getElementById('lname').value;
+        const firstName = document.getElementById('fname').value;
+        const old = document.getElementById('old').value;
+
+        console.log("User's informations :");
+
+        console.log(lastName);
+        console.log(firstName);
+        console.log(old);
+
+        // Create a message
+        const message = "Hey " + firstName + ", haven't you " + old + " years old ? This is moment for you to buy a beautiful and fresh cactus ! :)";
+
+        // Send a message
+        const dfMessenger = document.querySelector('df-messenger');
+        dfMessenger.renderCustomText(message);
+
+        const payload = [{
+            "type" : "image",
+            "rawUrl": "https://c.tenor.com/GbutACtJBTMAAAAd/cat.gif"
+        }];
+        dfMessenger.renderCustomCard(payload);
+    }
 </script>
 
 <style>
-body {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    padding-top: 20%;
-}
+    body {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 20%;
+    }
 </style>
