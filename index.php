@@ -31,13 +31,15 @@
     </form>
     <p>Click on this button to launch the Bot's experiments :)</p>
 
-    <?php include("src/bot.php"); ?>
+    <?php include("src/chatbot.php"); ?>
 
 </body>
 
 </html>
 
+<script src="src/bot.js"></script>
 <script>
+
     function experiment() {
         // get user's informations
         const lastName = document.getElementById('lname').value;
@@ -49,22 +51,10 @@
         console.log(lastName);
         console.log(firstName);
         console.log(old);
-
-        // Create messages
-        const introMessage = "Hey " + firstName + ", haven't you " + old + " years old ? This is THE moment for you to buy a beautiful and fresh cactus !";
-        const calmMessage = "Do you know that plants could lowers the levels of anxiety and increases the productivity ?"
         
-        // Create the image
-        const introImage = [{
-            "type" : "image",
-            "rawUrl": "https://cdn.dribbble.com/users/203287/screenshots/4389638/cacti2.gif"
-        }];
-
-        // Send content via the chatbox
-        const dfMessenger = document.querySelector('df-messenger');
-        dfMessenger.renderCustomCard(introImage);
-        dfMessenger.renderCustomText(introMessage);
-        dfMessenger.renderCustomText(calmMessage);
+        // Create the bot
+        const bot = new Bot(lastName, firstName, old);
+        bot.test();
     }
 </script>
 
