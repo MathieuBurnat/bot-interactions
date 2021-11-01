@@ -22,3 +22,6 @@ return array(
 ```cmd
 php -S Localhost:8000
 ```
+
+## Sources
+How to upgrade a bot ? https://botflo.com/dialogflow-messenger-tutorial/
