@@ -29,7 +29,7 @@
         </a>
 
     </form>
-    <p>Click on this button to launch the Bot's experiments :)</p>
+    <p>Click on this button to launch the Bot's experiment :)</p>
 
     <?php include("src/chatbot.php"); ?>
 
