@@ -39,6 +39,23 @@ class Bot {
 
   test(){
     console.log("-- Test Area --");
+
+    const payload = [
+      {
+        "type": "button",
+        "icon": {
+          "type": "chevron_right",
+          "color": "#FF9800"
+        },
+        "text": "Buy cactus",
+        "event": {
+          "name": "command",
+          "languageCode": "en",
+        }
+      }
+    ];
+
+    this.dfMessenger.renderCustomCard(payload);
   }
 }
 

@@ -23,9 +23,13 @@
         <label for="old">Age</label><br>
         <input type="text" id="old" name="old" value="42"><br><br>
         <div class="center">
-            <a onclick="experiment();" class="waves-effect waves-light btn">
+            <a onclick="experiment1();" class="waves-effect waves-light btn">
                 <i class="material-icons right">cloud</i>
                 Launch Bot's experiments
+            </a>
+            <a onclick="experiment2();" class="waves-effect waves-light btn">
+                <i class="material-icons right">beach_access</i>
+                Test
             </a>
         </div>
     </form>
@@ -39,8 +43,8 @@
 
 <script src="src/bot.js"></script>
 <script>
-
-    function experiment() {
+    let bot = null;
+    function experiment1() {
         // get user's informations
         const userData = {
             lastName: document.getElementById('lname').value,
@@ -53,10 +57,13 @@
         console.log(userData.lastName);
         console.log(userData.firstName);
         console.log(userData.old);
-        
+
         // Create the bot
-        const bot = new Bot(userData);
+        bot = new Bot(userData);
         bot.displayMessages();
+    }
+
+    function experiment2() {
         bot.test();
     }
 </script>
