@@ -28,13 +28,14 @@ class Bot {
     this.messages.push(new Message("Do you know that plants could lowers the levels of anxiety and increases the productivity ?", true));
   }
 
-  displayMessages() {
-    // Send content via the chatbox
-    for(let i = 0; i < this.messages.length; i++){
-        this.messages[i].display(this.dfMessenger);
-    }
-
+  async displayMessages() {
     this.dfMessenger.expand = true;
+
+    // Send content to the chatbox
+    for(let i = 0; i < this.messages.length; i++){
+      await this.delay(i * 1000);
+      this.messages[i].display(this.dfMessenger);
+    }
   }
 
   test(){
@@ -57,6 +58,10 @@ class Bot {
 
     this.dfMessenger.renderCustomCard(payload);
   }
+
+  delay = millis => new Promise((resolve, reject) => {
+    setTimeout(_ => resolve(), millis)
+  });
 }
 
 class Message {
