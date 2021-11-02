@@ -21,7 +21,7 @@
         <input type="text" id="fname" name="fname" value="Didier"><br>
 
         <label for="old">Age</label><br>
-        <input type="text" id="old" name="old" value="54"><br><br>
+        <input type="text" id="old" name="old" value="42"><br><br>
         <div class="center">
             <a onclick="experiment();" class="waves-effect waves-light btn">
                 <i class="material-icons right">cloud</i>
