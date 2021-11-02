@@ -12,28 +12,40 @@
 </head>
 
 <body>
-    <h3 class="center"> Formulary </h3>
+    <h2 class="center"> Formulary </h2>
+    <h5> User's Data </h5>
     <form action="post">
-        <label for="lname">Nom</label><br>
+        <label for="lname">Name</label><br>
         <input type="text" id="lname" name="lname" value="Rionzi"><br>
 
-        <label for="fname"> Prénom</label><br>
+        <label for="fname"> Firstname</label><br>
         <input type="text" id="fname" name="fname" value="Didier"><br>
 
-        <label for="old">Age</label><br>
+        <label for="old">Old</label><br>
         <input type="text" id="old" name="old" value="42"><br><br>
+
+        <h5> Command a cactus </h5>
+        <label for="cType">Cactus type</label><br>
+        <input type="text" id="cType" name="cType" value="christmas"><br>
+        <label for="Amount">Amount</label><br>
+        <input type="text" id="Amount" name="Amount" value="4"><br>
+
+        <h5> Launch Bot's experiments <i class="material-icons right" style="color:#90b1ae;">cloud</i></h5>
         <div class="center">
-            <a onclick="experiment1();" class="waves-effect waves-light btn">
-                <i class="material-icons right">cloud</i>
-                Launch Bot's experiments
+            <a onclick="initBot();" class="waves-effect waves-light btn">
+                <i class="material-icons right">bug_report</i>
+                Initialize the Bot
             </a>
-            <a onclick="experiment2();" class="waves-effect waves-light btn">
+            <a onclick="command();" class="waves-effect waves-light btn">
                 <i class="material-icons right">beach_access</i>
-                Test
+                Send a Command
             </a>
         </div>
+
+
     </form>
-    <p class="center">Click on this button to launch the Bot's experiment :)</p>
+
+    <p class="center">Click on buttons to launch the Bot's experiments :)</p>
 
     <?php include("src/chatbot.php"); ?>
 
@@ -44,8 +56,14 @@
 <script src="src/bot.js"></script>
 <script>
     let bot = null;
-    function experiment1() {
-        // get user's informations
+    function initBot() {
+        console.log("----------------------");
+        console.log("First experimentation : Initialize the chatbox");
+        console.log("--> Initialize the chatbox");
+        console.log("--> Speak directly to the client");
+        console.log("Note : Here the interface doesn't communicate userData to the bot");
+
+        // get user's data
         const userData = {
             lastName: document.getElementById('lname').value,
             firstName: document.getElementById('fname').value,
@@ -63,7 +81,11 @@
         bot.displayMessages();
     }
 
-    function experiment2() {
+    function command() {
+        console.log("----------------------");
+        console.log("Second experimentation : Call an intent if the client clicks on the button");
+        console.log("--> If the data from the command are filled, the bot will directly command a cactus");
+
         bot.test();
     }
 </script>
