@@ -27,8 +27,8 @@
         <h5> Command a cactus </h5>
         <label for="cType">Cactus type</label><br>
         <input type="text" id="cType" name="cType" value="christmas"><br>
-        <label for="Amount">Amount</label><br>
-        <input type="text" id="Amount" name="Amount" value="4"><br>
+        <label for="amount">Amount</label><br>
+        <input type="text" id="amount" name="amount" value="4"><br>
 
         <h5> Launch Bot's experiments <i class="material-icons right" style="color:#90b1ae;">cloud</i></h5>
         <div class="center">
@@ -41,8 +41,6 @@
                 Send a Command
             </a>
         </div>
-
-
     </form>
 
     <p class="center">Click on buttons to launch the Bot's experiments :)</p>
@@ -86,7 +84,17 @@
         console.log("Second experimentation : Call an intent if the client clicks on the button");
         console.log("--> If the data from the command are filled, the bot will directly command a cactus");
 
-        bot.test();
+        // get user's data
+        const cactusData = {
+            type: document.getElementById('cType').value,
+            amount: document.getElementById('amount').value,
+        }
+
+        console.log("cactus's informations :");
+
+        console.log(cactusData.type);
+        console.log(cactusData.amount);
+        bot.command(cactusData);
     }
 </script>
 

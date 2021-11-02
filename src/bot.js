@@ -38,8 +38,7 @@ class Bot {
     }
   }
 
-  test(){
-    console.log("-- Test Area --");
+  command(cactusData){
 
     const payload = [
       {
