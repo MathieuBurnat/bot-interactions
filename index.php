@@ -30,6 +30,14 @@
         <label for="amount">Amount</label><br>
         <input type="text" id="amount" name="amount" value="4"><br>
 
+        <div class="switch">
+            <label>
+                Send the command in the intend's parameters ?
+                <input checked id="my-switch" type="checkbox">
+                <span class="lever"></span>
+            </label>
+        </div>
+
         <h5> Launch Bot's experiments <i class="material-icons right" style="color:#90b1ae;">cloud</i></h5>
         <div class="center">
             <a onclick="initBot();" class="waves-effect waves-light btn">
@@ -54,6 +62,7 @@
 <script src="src/bot.js"></script>
 <script>
     let bot = null;
+
     function initBot() {
         console.log("----------------------");
         console.log("First experimentation : Initialize the chatbox");
@@ -80,20 +89,26 @@
     }
 
     function command() {
+        let saveParameters = document.getElementById('my-switch').checked;
         console.log("----------------------");
         console.log("Second experimentation : Call an intent if the client clicks on the button");
         console.log("--> If the data from the command are filled, the bot will directly command a cactus");
+        console.log("--> Shoudl save parameters : " + saveParameters);
+
 
         // get user's data
-        const cactusData = {
-            type: document.getElementById('cType').value,
-            amount: document.getElementById('amount').value,
+        let cactusData = "";
+        if (saveParameters) {
+            cactusData = {
+                type: document.getElementById('cType').value,
+                amount: document.getElementById('amount').value,
+            }
         }
 
         console.log("cactus's informations :");
-
         console.log(cactusData.type);
         console.log(cactusData.amount);
+        console.log(document.getElementById('my-switch').checked);
         bot.command(cactusData);
     }
 </script>
