@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h3> Formulary </h3>
+    <h3 class="center"> Formulary </h3>
     <form action="post">
         <label for="lname">Nom</label><br>
         <input type="text" id="lname" name="lname" value="Rionzi"><br>
@@ -22,14 +22,14 @@
 
         <label for="old">Age</label><br>
         <input type="text" id="old" name="old" value="54"><br><br>
-
-        <a onclick="experiment();" class="waves-effect waves-light btn center">
-            <i class="material-icons right">cloud</i>
-            Launch Bot's experiments
-        </a>
-
+        <div class="center">
+            <a onclick="experiment();" class="waves-effect waves-light btn">
+                <i class="material-icons right">cloud</i>
+                Launch Bot's experiments
+            </a>
+        </div>
     </form>
-    <p>Click on this button to launch the Bot's experiment :)</p>
+    <p class="center">Click on this button to launch the Bot's experiment :)</p>
 
     <?php include("src/chatbot.php"); ?>
 
@@ -65,7 +65,6 @@
     body {
         width: 50%;
         margin: auto;
-        text-align: center;
-        padding-top: 20%;
+        padding-top: 5em;
     }
 </style>
