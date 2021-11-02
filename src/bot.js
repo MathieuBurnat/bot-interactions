@@ -39,7 +39,7 @@ class Bot {
   }
 
   command(cactusData){
-
+    
     const payload = [
       {
         "type": "button",
@@ -50,6 +50,10 @@ class Bot {
         "text": "Buy cactus",
         "event": {
           "name": "command",
+          "parameters": {
+            "type" : cactusData.type,
+            "amount" : cactusData.amount
+          },
           "languageCode": "en",
         }
       }
